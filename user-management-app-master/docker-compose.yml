@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  user-management:
+    container_name: 'user-management'
+    image: node:11
+    depends_on:
+      - user-management-mongo
+    working_dir: /usr/src/app
+    command: bash -c "node server"
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./:/usr/src/app
+    network_mode: "host"
+    restart: "no"
+
+  user-management-mongo:
+    container_name: 'user-management-mongo'
+    image: mongo
+    volumes:
+      - user_management_mongo:/data/db
+    ports:
+      - "27017:27017"
+    network_mode: "host"
+    restart: "no"
+
+volumes:
+  user_management_mongo:
+    driver: local
