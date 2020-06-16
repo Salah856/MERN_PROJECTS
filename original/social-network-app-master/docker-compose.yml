@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  social-network-app:
+    container_name: 'social-network-app'
+    image: node:11
+    depends_on:
+      - social-network-app-mongo
+    working_dir: /usr/src/app
+    command: bash -c "npm run start:prod"
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./:/usr/src/app
+    network_mode: "host"
+    restart: "no"
+
+  social-network-app-mongo:
+    container_name: 'social-network-app-mongo'
+    image: mongo
+    volumes:
+      - social_network_app_mongo:/data/db
+    ports:
+      - "27017:27017"
+    network_mode: "host"
+    restart: "no"
+
+volumes:
+  social_network_app_mongo:
+    driver: local
