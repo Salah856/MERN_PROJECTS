@@ -1,0 +1,16 @@
+.wysiwyg-editor {
+  border: 1px solid #ced4da !important;
+  padding: 5px !important;
+  border-radius: 2px !important;
+  height: 80% !important;
+}
+
+.wysiwyg-wrapper {
+  width: auto !important;
+  display: block !important;
+  height: 400px !important;
+}
+
+.rdw-editor-toolbar {
+  border: 1px solid #ced4da !important;
+}

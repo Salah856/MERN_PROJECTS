@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  blog-app:
+    container_name: 'blog-app'
+    image: node:11
+    depends_on:
+      - blog-app-mongo
+    working_dir: /usr/src/app
+    command: bash -c "node server"
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./:/usr/src/app
+    network_mode: "host"
+    restart: "no"
+
+  blog-app-mongo:
+    container_name: 'blog-app-mongo'
+    image: mongo
+    volumes:
+      - blog_app_mongo:/data/db
+    ports:
+      - "27017:27017"
+    network_mode: "host"
+    restart: "no"
+
+volumes:
+  blog_app_mongo:
+    driver: local

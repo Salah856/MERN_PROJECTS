@@ -1,0 +1,31 @@
+/*==============================================================
+	Media css
+==============================================================*/
+@media (max-width: 1200px){
+	/*============ Login Style 1 =============*/
+	.style1 .login-form-box{right: 20px;}
+}
+@media (max-width: 991px){
+	/*============ Login Style 1 =============*/
+	.style1 .login-form-box{right: 0;}
+	.style1 .login-box h1.title{font-size: 45px; left: 30px;}
+	.style1 .login-box h3.subtitle{left: 30px;}
+}
+@media (max-width: 767px){
+	/*============ Login Style 1 =============*/
+	.style1 .login-box{height: auto;padding: 30px 10px;}
+	.style1 .login-box h1.title{position: relative; top: 0; left: 0; text-align: center;}
+	.style1 .login-box h3.subtitle{position: relative; top: 0; left: 0; text-align: center; padding-bottom: 15px;}
+	.style1 .login-form-box{position: relative; width: 100%; max-width: 400px; right: 0; margin: 0 auto;}
+	.login-style1{padding: 30px 15px 10px;}
+	/*============ Login Style 3 =============*/
+	.style3 .login-form-slider .slide{padding-top: 230px;}
+	/*============ Login Style 4 =============*/
+	.style4 .login-box{height: auto;}
+	.style4 .login-form-slider .slide{position: relative; height: auto;}
+	/*============ Login Style 5 =============*/
+	.style5 .login-box{height: auto;}
+	.style5 .style5-left{display: none;}
+	.style5 .style5-right{min-height: 500px;}
+	.style5 .login-form-slider .slide{position: relative; padding: 50px 15px 0;}
+}
