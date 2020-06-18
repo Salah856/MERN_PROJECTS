@@ -1,0 +1,29 @@
+version: '3.5'
+
+services:
+  webscraping-app:
+    container_name: 'webscraping-app'
+    image: webscraping-app
+    depends_on:
+      - webscraping-app-mongo
+    working_dir: /usr/src/app
+    command: bash -c "node server"
+    ports:
+      - '8081:8081'
+    volumes:
+      - ./:/usr/src/app
+    network_mode: "host"
+    restart: "no"
+
+  webscraping-app-mongo:
+    container_name: 'webscraping-app-mongo'
+    image: mongo
+    volumes:
+      - webscraping_app_mongo:/data/db
+    ports:
+      - "27018:27017"
+    restart: "no"
+
+volumes:
+  webscraping_app_mongo:
+    driver: local
