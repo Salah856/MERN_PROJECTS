@@ -1,0 +1,39 @@
+.page {
+  height: 100vh;
+  background-color: #fff;
+}
+.search-div {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  background: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.search-div img {
+  width: 100%;
+}
+
+.input-group input {
+  border-radius: 30px;
+  height: 50px;
+}
+.input-group-append button {
+  border-radius: 30px;
+  border-color: #ced4da;
+}
+.input-group-append button:hover {
+  background: #f8b400;
+  border-color: #ced4da;
+}
+
+.results {
+  color: #777;
+}
+
+.rbt-input {
+  width: 408px !important;
+}

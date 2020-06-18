@@ -1,0 +1,172 @@
+[
+  {
+    "type": "post",
+    "url": "/api/search/feeds",
+    "title": "Fetch Feeds",
+    "version": "1.0.0",
+    "name": "fetchFeeds",
+    "group": "Search",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "options",
+            "description": "<p>used for paging.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>Returns true if success, false if not.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Contains the feeds information.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "data.feeds",
+            "description": "<p>Array of Feeds with their information.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Returns message results.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "server/routes/api/search.js",
+    "groupTitle": "Search"
+  },
+  {
+    "type": "post",
+    "url": "/api/search/suggestions",
+    "title": "Fetch Suggestions",
+    "version": "1.0.0",
+    "name": "fetchSuggestions",
+    "group": "Search",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "keyword",
+            "description": "<p>used for filtering suggestions</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>Returns true if success, false if not.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Contains the feeds information.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "data.suggestions",
+            "description": "<p>Array of Suggestions.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Returns message results.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "server/routes/api/search.js",
+    "groupTitle": "Search"
+  },
+  {
+    "type": "post",
+    "url": "/api/webhook",
+    "title": "Receive Webhooks",
+    "version": "1.0.0",
+    "name": "webhook",
+    "group": "Webhook",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>Returns true if success, false if not.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Returns message results.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "server/routes/api/webhook.js",
+    "groupTitle": "Webhook"
+  }
+]

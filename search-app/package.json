@@ -1,0 +1,72 @@
+{
+  "name": "search-app",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Matthew A. Raymer",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.anomalistdesign.com:eduonix/mongodb-for-beginners/search-app.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "npm run start:dev",
+    "start:wo-docker": "npm run set:config:dev && node server",
+    "start:dev": "npm run set:config:dev && npm run docker:start",
+    "start:prod": "npm run set:config:prod && npm run build:prod && npm run docker:start",
+    "build:prod": "npm run lint & webpack -p --progress --profile --colors",
+    "build:doc:api": "node_modules/.bin/apidoc -i server/ -o documentation/",
+    "lint": "eslint ./client ./server",
+    "lint:fix": "eslint --fix ./client ./server",
+    "docker:start": "docker-compose up -d",
+    "docker:restart": "npm run docker:stop && npm run docker:start",
+    "docker:stop": "docker-compose down",
+    "docker:build": "docker build -t search-app .",
+    "set:config:dev": "cp ./config/config.dev.js ./config/config.js",
+    "set:config:prod": "cp ./config/config.prod.js ./config/config.js"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.17.1",
+    "history": "^4.9.0",
+    "mdbreact": "^4.18.1",
+    "mongodb": "^3.2.7",
+    "n-gram": "^1.1.1",
+    "nodemon": "^1.19.1",
+    "react": "^16.8.6",
+    "react-bootstrap-typeahead": "^3.4.6",
+    "react-dom": "^16.8.6",
+    "react-md": "^1.12.1",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "apidoc": "^0.17.7",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.0.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.1"
+  }
+}

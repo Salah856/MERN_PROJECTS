@@ -1,0 +1,29 @@
+version: '3.5'
+
+services:
+  search-app:
+    container_name: 'search-app'
+    image: node:11
+    depends_on:
+      - search-app-mongo
+    working_dir: /usr/src/app
+    command: bash -c "node server"
+    ports:
+      - '8082:8082'
+    volumes:
+      - ./:/usr/src/app
+    network_mode: "host"
+    restart: "no"
+
+  search-app-mongo:
+    container_name: 'search-app-mongo'
+    image: mongo
+    volumes:
+      - search_app_mongo:/data/db
+    ports:
+      - "27019:27017"
+    restart: "no"
+
+volumes:
+  search_app_mongo:
+    driver: local
