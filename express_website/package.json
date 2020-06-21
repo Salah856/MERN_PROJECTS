@@ -9,9 +9,9 @@
   "author": "Brad Traversy",
   "license": "ISC",
   "dependencies": {
-  	"body-parser": "*",
-  	"express": "*",
-  	"jade": "*",
-  	"nodemailer": "*"
+    "body-parser": "*",
+    "express": "*",
+    "jade": "*",
+    "nodemailer": "*"
   }
 }

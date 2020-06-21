@@ -13,14 +13,13 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "mongodb":"*",
-    "monk": "^1.0.1",
+    "mongodb": "*",
     "monk": "https://github.com/vccabral/monk.git",
-    "connect-flash":"*",
-    "express-validator":"*",
-    "express-session":"*",
-    "express-messages":"*",
-    "multer":"*",
-    "moment":"*"
+    "connect-flash": "*",
+    "express-validator": "*",
+    "express-session": "*",
+    "express-messages": "*",
+    "multer": "*",
+    "moment": "*"
   }
 }

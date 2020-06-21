@@ -23,7 +23,6 @@
     "docker:restart": "npm run docker:rm && npm run docker:start",
     "docker:stop": "docker-compose down",
     "set:config:dev": "cp ./config/config.dev.js ./config/config.js",
-    
     "set:config:prod": "cp ./config/config.prod.js ./config/config.js"
   },
   "engines": {
