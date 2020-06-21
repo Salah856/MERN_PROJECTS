@@ -1,0 +1,31 @@
+.ReactModal__Overlay {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+.Modal {
+    width: 600px !important;
+}
+
+.ModalButton {
+    display: inline-block;
+    background: #2E6F7D;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.50);
+    border:none;
+    width: 46%;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.19px;
+    transition: all 200ms ease-in-out;
+    outline: none;
+}
+
+.ModalButton--close {
+    background: darkred;
+}
+
+
+.ModalButton:hover {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.50);
+}

@@ -1,0 +1,37 @@
+.StoryItem {
+    padding: 5px 5px;
+    background-image: linear-gradient(-180deg, #FFFFFF 0%, #F8F8F8 98%);
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.StoryItem__content {
+    color: #444444;
+}
+
+.StoryItem__content h4 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2E6F7D;
+}
+
+.StoryItem__control {
+    padding-left: 30px;
+}
+
+.StoryItem__control span {
+    line-height: 100px;
+    letter-spacing: 15px;
+    transition: color 100ms ease-in-out;
+}
+
+.StoryItem__control span:first-child:hover {
+    color: #2E6F7D;
+    cursor: pointer;
+}
+
+.StoryItem__control span:last-child:hover {
+    color: red;
+    cursor: pointer;
+}

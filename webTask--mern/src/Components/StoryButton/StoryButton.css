@@ -1,0 +1,31 @@
+.StoryButton {
+    /*
+    * Position
+    */
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+
+    /*
+    * Looks
+    */
+    /* Oval: */
+    background: #2E6F7D;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.50);
+    border:none;
+    border-radius: 100%;
+    width: 1.6em;
+    height: 1.6em;
+
+    /* +: */
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: 0.19px;
+    transition: all 200ms ease-in-out;
+    outline: none;
+}
+
+
+.StoryButton:hover {
+   box-shadow: 0 4px 10px 0 rgba(0,0,0,0.50);
+}

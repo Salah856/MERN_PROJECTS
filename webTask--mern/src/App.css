@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Lato', sans-serif !important;
+  height: 100%;
+  background-image: radial-gradient(50% 110%, #FBDA61 0%, #F9AA43 100%);
+  background-repeat: no-repeat;
+}
+
+.Story {
+  /* Mask: */
+  background: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.30);
+  border-radius: 10px;
+  margin-top: 70px;
+  padding: 0;
+}
+
+/*
+* StoryHeader
+*/
+.StoryHeader {
+  /* Rectangle: */
+  background: #2E6F7D;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 15px;
+}
+
+.StoryHeader h2 {
+  margin: 0;
+  color: #fff;
+  letter-spacing: 1.6px;
+  font-size: 24px;
+  font-family: 'Dosis', sans-serif !important;
+}
+
+.StoryFooter {
+  background: whitesmoke;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 15px;
+}
