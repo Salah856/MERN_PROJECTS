@@ -1,0 +1,41 @@
+.App {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  border-radius: 9px;
+  font-size: 0.75em;
+  box-shadow: 0 27px 20px 5px rgba(0, 0, 0, 0.03);
+}
+
+.User__img {
+  height: 380px;
+  position: relative;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+  background: #ffd2fe;
+}
+.User__img > img {
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.User__info {
+  background: #fff;
+  height: 220px;
+  padding: 2rem;
+  border-radius: 9px;
+}
+
+.User__info__divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 2rem 0 0 0;
+  padding: 1rem 0 0 0;
+}
+.User__info__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faint {
+  color: rgba(0, 0, 0, 0.47);
+}

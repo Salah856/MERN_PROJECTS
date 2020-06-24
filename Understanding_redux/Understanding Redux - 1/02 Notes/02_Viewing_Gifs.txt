@@ -1,0 +1,7 @@
+Hi!
+
+The book contains GIFs so you can understand what’s being explained even more. 
+
+These GIFs will not display as expected on PDFs. For viewing the GIFs, you’ll need to use either the EPUB file.
+
+Thought you should know. 
