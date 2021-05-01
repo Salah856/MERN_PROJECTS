@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var multer = require('multer');
+
 var upload = multer({ dest: 'uploads/' })
 
 var expressValidator = require('express-validator');
