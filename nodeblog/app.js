@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var multer = require('multer');
 var upload = multer({ dest: 'uploads/' })
+
 var expressValidator = require('express-validator');
 
 var mongo = require('mongodb');
@@ -24,6 +25,7 @@ app.locals.truncateText = function(text, length){
   var truncatedText = text.substring(0, length);
   return truncatedText;
 }
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
