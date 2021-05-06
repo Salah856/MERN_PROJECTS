@@ -48,7 +48,7 @@
     "react": "^16.8.6",
     "react-data-table-component": "^2.1.1",
     "react-dom": "^16.8.6",
-    "react-draft-wysiwyg": "^1.13.2",
+    "react-draft-wysiwyg": "^1.14.6",
     "react-md": "^1.12.1",
     "react-router-dom": "^5.0.1",
     "resize-base64": "^1.0.12",
