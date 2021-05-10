@@ -1,6 +1,7 @@
 const nodemon = require('nodemon');
 const path = require('path');
 
+
 nodemon({
   execMap: {
     js: 'node'
@@ -16,3 +17,4 @@ nodemon({
 .once('exit', function () {
   console.log('Server is restarting!');
 });
+
