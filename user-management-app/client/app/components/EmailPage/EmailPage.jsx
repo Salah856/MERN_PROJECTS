@@ -1,15 +1,3 @@
-/*
- * File: EmailPage.jsx
- * Project: user-management
- * File Created: Thursday, 6th June 2019 1:56:55 pm
- * Author: Matthew A. Raymer (matthew.raymer@anomalistdesign.com)
- * -----
- * Last Modified: Friday, 7th June 2019 2:54:12 pm
- * Modified By: Matthew A. Raymer (matthew.raymer@anomalistdesign.com>)
- * -----
- * Copyright 2019, ADDLC
- */
-
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
