@@ -116,4 +116,19 @@ This approach makes things easier to maintain or update in the long run. Your co
 ![image1](https://user-images.githubusercontent.com/23625821/119345327-067ff780-bc99-11eb-865f-a84071afaebc.png)
 
 
+However, this approach takes time to set up initially.  You have less flexibility.  That’s kind of a double edged sword because it prevents you from doing something unusual.
 
+```javascript 
+export default function courier(query, payload) {
+   let path = `${SITE_URL}`;
+   path += `/${query.model}`;
+   if (query.id) path += `/${query.id}`;
+   if (query.url) path += `/${query.url}`;
+   if (query.var) path += `?${QueryString.stringify(query.var)}`;
+   
+
+   return axios({ url: path, ...payload })
+     .then(response => response)
+     .catch(error => ({ error }));
+}
+```
