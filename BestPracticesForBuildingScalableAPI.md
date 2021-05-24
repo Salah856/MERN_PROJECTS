@@ -91,3 +91,19 @@ Arranging your datastore this way requires you to define GET, POST, PUT requests
 
 ![image12](https://user-images.githubusercontent.com/23625821/119345147-c7ea3d00-bc98-11eb-870a-6e74ab9681f8.jpg)
 
+
+In the above diagram, each component dispatches actions that call methods of the different datastores. This is what the updateBlog method of the BlogApi file would look like.
+```javascript
+function updateBlog(blog){
+   let blog_object = new BlogModel(blog) 
+   axios.put('/blog', { ...blog_object })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+```
+
+This approach saves time... At first, it also lets you make modifications without worrying too much about side effects. But there’ll be a lot of redundant code, and performing bulk updates is time-consuming.
