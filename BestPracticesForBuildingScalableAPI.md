@@ -139,3 +139,43 @@ Here’s what a basic courier method would look like, all the API handlers can s
 2. Payload, which contains request headers and body.
 
 
+## API calls and In-app actions
+While working with redux, one thing that stands out is the usage of predefined actions. It makes the changes in data throughout the app, much more predictable.
+
+Even though it may seem like a lot of work - to define a bunch of constants in a large app, Step 2 of the planning phase makes it a whole lot easier.
+
+```javascript
+export const BOOK_ACTIONS = {
+   GET:'GET_BOOK',
+   LIST:'GET_BOOKS',
+   POST:'POST_BOOK',
+   UPDATE:'UPDATE_BOOK',
+   DELETE:'DELETE_BOOK',
+}
+
+export function createBook(book) {
+   return {
+      type: BOOK_ACTIONS.POST,
+    	book
+   }
+}
+
+export function handleCreateBook (book) {
+   return (dispatch) => {
+      return createBookAPI(book)
+         .then(() => {
+            dispatch(createBook(book))
+         })
+         .catch((e) => {
+            console.warn('error in creating book', e);
+            alert('Error Creating book')
+         })
+   }
+}
+
+export default {
+   handleCreateBook,
+}
+```
+
+
