@@ -21,3 +21,19 @@ After deciding on components, plan out what actions would be performed within ea
 
 Consider an e-commerce site with a list of featured products on the homescreen. Each item on that list would be an individual component in the project. Let the name of the component be ListItem.
 
+## Step 3: Data and models
+Every component of the app has some data associated with it. If the same data is being used by multiple components of the application, it will be part of the centralized state tree. The state tree will be managed by redux.
+
+This data is used by multiple components, hence when it is changed at one place other components reflect the changed value too.
+
+Make a list of such data in your application as this will constitute the models of the app, and based on these values you'll create your app’s reducers.
+
+
+```javascript 
+ products: {
+  productId: {productId, productName, category, image, price},
+  productId: {productId, productName, category, image, price},
+  productId: {productId, productName, category, image, price},
+}
+```
+
