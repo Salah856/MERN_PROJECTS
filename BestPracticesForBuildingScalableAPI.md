@@ -37,3 +37,6 @@ Make a list of such data in your application as this will constitute the models 
 }
 ```
 
+Consider the example of the e-commerce store above. The type of data being used by the featured section and the new arrivals section is the same, which is products. So that would be one of the reducers of this e-commerce app.
+
+After documenting your plan of action, it's time to look at some details necessary to setup the app’s data layer, covered in the next section.
