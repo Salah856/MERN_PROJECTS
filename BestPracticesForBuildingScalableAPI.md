@@ -40,3 +40,37 @@ Make a list of such data in your application as this will constitute the models 
 Consider the example of the e-commerce store above. The type of data being used by the featured section and the new arrivals section is the same, which is products. So that would be one of the reducers of this e-commerce app.
 
 After documenting your plan of action, it's time to look at some details necessary to setup the app’s data layer, covered in the next section.
+
+## Actions, Datasource and API
+As the app grows, it is very common for the redux store to have redundant methods and improper directory structure, and it becomes hard to maintain or update.
+
+Let’s see how we can realign some things to make sure the code of the redux store stays clean. A lot of trouble can be saved by making modules more reusable from the very beginning, although this can seem like trouble at first.
+
+## API design and client apps
+While setting up the datastore, the format in which data is received from the API affects the layout of your store a lot. Often times it is necessary to format it before it can be fed to the reducers.
+
+There's a lot of debate surrounding what should and shouldn't be done while designing API. Factors such as Backend Framework, Size of the APP further affect how you design your API.
+
+Just like you would in a backend app, keep utility functions like formatters and mappers in a separate folder. Make sure these functions are free of side effects 
+
+```javascript 
+export function formatTweet (tweet, author, authedUser, parentTweet) {
+  const { id, likes, replies, text, timestamp } = tweet
+  const { name, avatarURL } = author
+
+  return {
+    name,
+    id,
+    timestamp,
+    text,
+    avatar: avatarURL,
+    likes: likes.length,
+    replies: replies.length,
+    hasLiked: likes.includes(authedUser),
+    parent: !parentTweet ? null : {
+      author: parentTweet.author,
+      id: parentTweet.id,
+    }
+  }
+}
+``` 
