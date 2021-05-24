@@ -178,4 +178,24 @@ export default {
 }
 ```
 
+The above code snippet shows an easy way to blend in methods of our data source createBookAPI with our redux actions. The handleCreateBook method can be passed to the dispatch method of redux safely.
 
+Also, note that the above code lives in the actions directory of our project, we can similarly create javascript files containing the name of the actions and handlers for various other models of our app.
+
+
+## Redux Integrations
+In this section, I’ll discuss how the functionality of redux can be extended to take care of more complex operations of the app, systematically. These are the things that if implemented poorly can break the pattern of the store.
+
+Javascript generator functions are able to solve many problems associated with async programming since they can be started stopped at will. The Redux Sagas middleware uses this concept for managing impure aspects of the app.
+
+## Managing impure aspects of the app
+
+Consider a scenario. You are asked to work on an app for a real-estate discovery. The client wants to move to a new and better website. The REST API is in place, you’ve been given the design of each page on Zapier and you have drafted a plan as well, however calamity strikes.
+
+The CMS client has been used by their company for a very long time, they're very familiar with it, and thus do not wish to change to a new one just to write blogs.  In addition, copying all the old blogs would be a hassle.
+
+Fortunately, the CMS has a readable API that gives you the blog content.  Unfortunately, if you've written a courier, the CMS API is on another server that has different grammar.
+
+This is kind of an impure aspect of the app since you're accommodating a new API used for simply fetching the blogs. This can be handled by using React Sagas.
+
+Consider the following diagram.  We are fetching blogs in the background using Sagas.  This is what the entire interaction would look like.
