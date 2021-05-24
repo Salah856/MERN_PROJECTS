@@ -107,3 +107,13 @@ function updateBlog(blog){
 ```
 
 This approach saves time... At first, it also lets you make modifications without worrying too much about side effects. But there’ll be a lot of redundant code, and performing bulk updates is time-consuming.
+
+#### With Courier
+
+This approach makes things easier to maintain or update in the long run. Your codebase stays clean as you are saved the trouble of making duplicate calls via axios.
+
+
+![image1](https://user-images.githubusercontent.com/23625821/119345327-067ff780-bc99-11eb-865f-a84071afaebc.png)
+
+
+
