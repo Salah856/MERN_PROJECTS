@@ -132,3 +132,10 @@ export default function courier(query, payload) {
      .catch(error => ({ error }));
 }
 ```
+
+Here’s what a basic courier method would look like, all the API handlers can simply call it, by passing the following variables:
+
+1. A query object that would contain the URL related details like name of the model, query string and others.
+2. Payload, which contains request headers and body.
+
+
