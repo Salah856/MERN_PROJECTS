@@ -199,3 +199,42 @@ Fortunately, the CMS has a readable API that gives you the blog content.  Unfort
 This is kind of an impure aspect of the app since you're accommodating a new API used for simply fetching the blogs. This can be handled by using React Sagas.
 
 Consider the following diagram.  We are fetching blogs in the background using Sagas.  This is what the entire interaction would look like.
+
+![image6](https://user-images.githubusercontent.com/23625821/119345792-ab023980-bc99-11eb-8f3b-68e909b120e4.jpg)
+
+
+Here the component makes a dispatch action say GET.BLOGS and in an app using redux middleware that request will be intercepted and in the background, your generator function will fetch the data from datastore and update redux.
+
+Here’s an example of what a generator function of your blog sagas would look like. You can also use sagas to store user data (eg auth tokens) as it is another impure action.
+
+```javascript 
+function* fetchPosts(action) {
+ if (action.type === WP_POSTS.LIST.REQUESTED) {
+   try {
+     const response = yield call(wpGet, {
+       model: WP_POSTS.MODEL,
+       contentType: APPLICATION_JSON,
+       query: action.payload.query,
+     });
+     if (response.error) {
+       yield put({
+         type: WP_POSTS.LIST.FAILED,
+         payload: response.error.response.data.msg,
+       });
+       return;
+     }
+     yield put({
+       type: WP_POSTS.LIST.SUCCESS,
+       payload: {
+         posts: response.data,
+         total: response.headers['x-wp-total'],
+         query: action.payload.query,
+       },
+       view: action.view,
+     });
+   } catch (e) {
+     yield put({ type: WP_POSTS.LIST.FAILED, payload: e.message });
+   }
+ }
+```
+
