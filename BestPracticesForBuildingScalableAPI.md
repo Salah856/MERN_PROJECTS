@@ -238,3 +238,6 @@ function* fetchPosts(action) {
  }
 ```
 
+
+src: https://buttercms.com/blog/best-practices-for-building-a-large-scale-react-application
+
