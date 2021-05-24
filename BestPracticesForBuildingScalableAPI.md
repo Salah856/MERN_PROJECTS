@@ -74,3 +74,20 @@ export function formatTweet (tweet, author, authedUser, parentTweet) {
   }
 }
 ``` 
+
+In the above snippet, formatTweet function inserts a new key parent to the tweet object of the frontend app and returns data based on parameters, without affecting outside data.
+
+You can take it a step further by mapping the data to a predefined object whose structure is specific to your frontend app and has validations for some keys. Let's talk about the parts that are responsible for making the API calls.
+
+## Datasource design patterns
+The parts I describe in this section will be directly used by redux actions, to modify the state. Depending on the size of the app (and also the time you have) you can go about setting the datastore in one of the two ways.
+
+1. Without Courier
+2. With Courier
+
+#### Without Courier
+
+Arranging your datastore this way requires you to define GET, POST, PUT requests separately for each model.
+
+![image12](https://user-images.githubusercontent.com/23625821/119345147-c7ea3d00-bc98-11eb-870a-6e74ab9681f8.jpg)
+
