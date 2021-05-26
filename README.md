@@ -1,3 +1,4 @@
 # MERN_PROJECTS
 
-collection of real life projects in MERN stack. 
+collection of real life projects in MERN stack.  
+
