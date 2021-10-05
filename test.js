@@ -1,5 +1,7 @@
 import * as uuid from "uuid";
-import {AWS: { DynamoDB: DocumentClient }} from "aws-sdk";
+import { DynamoDB } from "aws-sdk";
+
+const { DocumentClient } = DynamoDB; 
 
 const dynamoDb = new DocumentClient();
 
