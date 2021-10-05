@@ -3,8 +3,9 @@ import { DynamoDB } from "aws-sdk";
 
 const { v1 } = uuid;
 const { DocumentClient } = DynamoDB; 
-
+let { stringify }  = JSON; 
 const dynamoDb = new DocumentClient();
+
 
 export async function main(event, context) {
   
@@ -25,15 +26,16 @@ export async function main(event, context) {
   };
   
   try {
+    let { Item } = params; 
     await dynamoDb.put(params).promise();
       return {
           statusCode: 200,
-          body: JSON.stringify(params.Item),
+          body: stringify(Item),
        };
     } catch (e) {
         return {
           statusCode: 500,
-          body: JSON.stringify({ error: e.message }),
+          body: stringify({ error: e.message }),
         };
      }
 }
