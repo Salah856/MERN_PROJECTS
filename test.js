@@ -24,8 +24,9 @@ export async function main(event, context) {
      },
   };
   
+  let { Item } = params; 
+  
   try {
-    let { Item } = params; 
     await dynamoDb.put(params).promise();
       return {
           statusCode: 200,
