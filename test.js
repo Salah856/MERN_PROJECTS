@@ -31,10 +31,10 @@ export async function main(event, context) {
           statusCode: 200,
           body: stringify(Item),
        };
-    } catch (e) {
+    } catch ({ errMsg }) {
         return {
           statusCode: 500,
-          body: stringify({ error: e.message }),
+          body: stringify({ error: errMsg }),
         };
      }
 }
