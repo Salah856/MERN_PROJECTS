@@ -1,6 +1,7 @@
 import * as uuid from "uuid";
 import { DynamoDB } from "aws-sdk";
 
+const { v1 } = uuid;
 const { DocumentClient } = DynamoDB; 
 
 const dynamoDb = new DocumentClient();
@@ -16,7 +17,7 @@ export async function main(event, context) {
       Item: {
        // The attributes of the item to be created
         userId: "123", // The id of the author
-        noteId: uuid.v1(), // A unique uuid
+        noteId: v1(), // A unique uuid
         content: data.content, // Parsed from request body
         attachment: data.attachment, // Parsed from request body
         createdAt: Date.now(), // Current Unix timestamp
