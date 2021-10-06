@@ -3,7 +3,9 @@ import { DynamoDB: { DocmentClient } } from "aws-sdk";
 
 const { v1 } = uuid;
 let { stringify }  = JSON; 
+
 const dynamoDb = new DocumentClient();
+const { tableName } = process.env; 
 
 export async function main(event, context) {
   
@@ -12,7 +14,7 @@ export async function main(event, context) {
   const { content, attachment } = JSON.parse(event.body);
 
   const params = {
-      TableName: process.env.tableName,
+      TableName: tableName,
       Item: {
        // The attributes of the item to be created
         userId: "123", // The id of the author
