@@ -1,8 +1,7 @@
 import * as uuid from "uuid";
-import { DynamoDB } from "aws-sdk";
+import { DynamoDB: { DocmentClient } } from "aws-sdk";
 
 const { v1 } = uuid;
-const { DocumentClient } = DynamoDB; 
 let { stringify }  = JSON; 
 const dynamoDb = new DocumentClient();
 
