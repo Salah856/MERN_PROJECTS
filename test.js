@@ -2,16 +2,14 @@ import * as uuid from "uuid";
 import { DynamoDB: { DocmentClient } } from "aws-sdk";
 
 const { v1 } = uuid;
-let { stringify }  = JSON; 
+let { stringify, parse }  = JSON; 
 
 const dynamoDb = new DocumentClient();
 const { tableName } = process.env; 
 
-export async function main(event, context) {
+export async function main({ body }, context) {
   
-  // Request body is passed in as a JSON encoded string in 'event.body'
-
-  const { content, attachment } = JSON.parse(event.body);
+  const { content, attachment } = parse(body);
 
   const params = {
       TableName: tableName,
