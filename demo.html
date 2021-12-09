@@ -1,0 +1,15 @@
+ <input 
+    id="uploadImage"
+     type="file"
+     accept="image/*"
+      onChange={(e)=>{
+        let inptEl = document.getElementById("uploadImage"); 
+        let avatar = inptEl.files[0]; 
+        console.log(avatar)
+        //console.log(e.target.value)
+        const form = new FormData(); 
+        form.append("avatar", avatar); 
+
+      }}    
+/> 
+
