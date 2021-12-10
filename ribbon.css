@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: 300px;
+  height: 400px; 
+  background-color: green;
+  left: 100px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+.ribbon{
+
+  background-color: red;
+  width: 500px; 
+  height: 60px; 
+  position: relative;
+  top: 1px; 
+  transform: rotate(45deg);
+  color: white;
+
+}
+
+.coming{
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
