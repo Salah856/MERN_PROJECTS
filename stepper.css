@@ -1,0 +1,81 @@
+
+/*  <>
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+
+      <div className="so">
+        1 
+      </div>
+
+  <input />
+
+    </div>
+
+
+   <h2 className="second">
+     <p>
+      Start editing to see some t
+      </p>
+      <div className="so2">
+        2
+      </div>
+      <input className="input"/>  
+
+   </h2>
+  </> */
+
+
+
+
+
+.App {
+  
+  font-family: sans-serif;
+  text-align: center;
+  border-left-style: dashed;
+  position: relative; 
+
+}
+
+.so{
+  width: 20px;
+  height: 20px; 
+  border-radius: 50%; 
+  color: white; 
+  background-color: blue; 
+  position: absolute; 
+  left: -10px; 
+  top: -23px; 
+  font-size: 17px ;
+
+
+
+}
+
+.second{
+  font-family: sans-serif;
+  text-align: center;
+  border-left-style: dashed;
+  position: relative; 
+  align-content: center;
+
+}
+
+.input{
+  margin: 0 auto;
+}
+
+.so2{
+  width: 20px;
+  height: 20px; 
+  border-radius: 50%; 
+  color: white; 
+  font-size: 17px ;
+  background-color: blue; 
+  position: absolute; 
+  left: -11px; 
+  top: -20px; 
+}
+
+
+
