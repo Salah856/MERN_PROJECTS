@@ -33,7 +33,9 @@ function App() {
         <FormControlLabel value="URL" control={<Radio style={{
           color: "blue"
         }} />} label="URL" />
-        <FormControlLabel value="Topic Flow" control={<Radio />} label="Topic Flow" />
+        <FormControlLabel value="Topic Flow" control={<Radio style={{
+          color: "blue"
+        }} />} label="Topic Flow" />
       </RadioGroup>
     </div>
   );
