@@ -82,17 +82,21 @@ const getConnectedChannels = (accounts) =>{
 		return valid; 
 	}; 
 
-	
+    const getConnectedAccountsObj = (channels) =>{
+    
+         let obj = {}; 
+    
+     channels.forEach(({id, connected})=>{
+       if(!obj[id]) obj[id] = 1; 
+       else if(obj[id]) obj[id] += 1; 
+     }); 
+    
+     return obj;
+    }
+    
     let c = getConnectedChannels(accounts); 
-    console.log(c); 
     
-    let obj = {}; 
+	let n = getConnectedAccountsObj(c); 
+console.log(n); 
     
-    c.forEach(({id, connected})=>{
-      if(!obj[id]) obj[id] = 1; 
-      else if(obj[id]) obj[id] += 1; 
-     // console.log(obj)
-      
-    }); 
-    
-    console.log(obj); 
+ 
