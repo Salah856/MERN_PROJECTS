@@ -1,6 +1,6 @@
 
 
-const getOldConnectedChannelInfo = (accountId)=>{
+const getOldConnectedChannelInfo = (accountId)=>{ 
 
    const info = connectedChannels.filter((channel)=>{
     return channel.account_id === accountId; 
