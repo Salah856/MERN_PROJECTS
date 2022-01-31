@@ -2,10 +2,10 @@
 
 
 .chart {
-  width: 10rem; 
-  height: 10rem;
-  border-radius: 50%;
-  border: 3rem solid #808080;
+  width: "10rem", 
+  height: "10rem", 
+  borderRadius: "50%", 
+  border: "3rem solid #808080", 
 
 }
 
