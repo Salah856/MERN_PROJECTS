@@ -14,6 +14,7 @@
   height: 0; 
   border-left: 5rem solid transparent;
   border-right: 5rem solid transparent;
+/*   border-left + border-right of child must equal width of parent !  */
   border-bottom: 5rem solid white; 
   
 }
