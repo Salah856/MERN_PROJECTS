@@ -1,0 +1,20 @@
+
+
+.parent{
+  width: 10rem; 
+  height: 8rem; 
+  background-color: green;
+  position: relative;
+}
+
+.child{
+  position: absolute;
+  bottom: 0; 
+  width: 0; 
+  height: 0; 
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-bottom: 5rem solid white; 
+  
+}
+
