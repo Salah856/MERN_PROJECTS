@@ -1,5 +1,5 @@
 
-function date(d){
+function formatDate(d){
   return new Date(d)
                 .toLocaleDateString("en-US", {
                     year: 'numeric', 
