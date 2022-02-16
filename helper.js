@@ -1,31 +1,35 @@
 
-let activeTalkyBot = talkyBots.find((bot) => bot?.id === "1") //  id : need to be generic and dynamic not "1"
 
-let activeChannels = activeTalkyBot?.attributes?.active_channels 
+const isBotStatusConnected = (talkyBots, botID, socialMediaProvider) => {
 
-if (
 
-   activeChannels?.length > 0 
+      let activeTalkyBot = talkyBots.find((bot) => bot?.id === botID);  
+      //  id : need to be generic and dynamic not "1"
+      
+      let activeChannels = activeTalkyBot?.attributes?.active_channels;
 
-   && 
-
-   activeChannels?.filter((ch) => ch?.provider === "facebook" )?.length > 0 
-      // also "facebook" need to be dynamic and generic not only facebook 
-  )
-
-{
-
-// make isConnectedBot state to true 
-  return true; 
-
-}
-
-else{
-
-// make isConnectedBot state to false 
-return false; 
+      if (
+         activeChannels?.length > 0 
+            && 
+         activeChannels?.filter((ch) => ch?.provider === socialMediaProvider )?.length > 0 
+            // also "facebook" need to be dynamic and generic not only facebook 
+        )
+      {
+      // make isConnectedBot state to true 
+            return true; 
+      }
+      else{
+      // make isConnectedBot state to false 
+            return false; 
+      }
 
 }
+
+
+
+
+
+
 
 let talkyBots = [
     {
