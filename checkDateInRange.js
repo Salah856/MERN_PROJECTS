@@ -1,7 +1,8 @@
 
 
 const checkDateInRange = (date, startDate, endDate) =>{
-
+    
+    // format of date must be : mm/dd/yyyy 
     
     var minDate = new Date(startDate);
     var maxDate =  new Date(endDate);
@@ -12,6 +13,5 @@ const checkDateInRange = (date, startDate, endDate) =>{
     else{
         return false; 
     }
-
 
 }
