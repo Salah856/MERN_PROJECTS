@@ -1,7 +1,6 @@
 
 
 const checkDateInRange = (date, startDate, endDate) =>{
-    
     // format of date must be : mm/dd/yyyy 
     
     var currentDate = new Date(date); 
