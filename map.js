@@ -9,6 +9,8 @@ const location = {
 } 
 
 
+
+
 const Map = ({ location, zoomLevel=15 }) => (
   
   
