@@ -1,7 +1,6 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
    
-
 const location = {
   address: '1600 Amphitheatre Parkway, Mountain View, california.',
   lat: 37.42216,
@@ -22,4 +21,10 @@ const Map = ({ location, zoomLevel=15 }) => (
     </div>
   </div>
 )
+
+
+
+
+
+
 
