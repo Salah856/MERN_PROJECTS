@@ -9,14 +9,9 @@ const location = {
 } 
 
 
-
-
 const Map = ({ location, zoomLevel=15 }) => (
-  
-  
+    
   <div className="map">
-    <h2 className="map-h2">Come Visit Us At Our Campus</h2>
-
     <div className="google-map">
       <GoogleMapReact
         bootstrapURLKeys={{ key: '' }}
