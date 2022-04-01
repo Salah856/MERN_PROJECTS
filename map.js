@@ -11,14 +11,12 @@ const location = {
 const Map = ({ location, zoomLevel=15 }) => (
     
   <div style={{}}>
-    <div>
       <GoogleMapReact
         bootstrapURLKeys={{ key: '' }}
         defaultCenter={location}
         defaultZoom={zoomLevel}
       >
       </GoogleMapReact>
-    </div>
   </div>
 )
 
